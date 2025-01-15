@@ -23,19 +23,6 @@ namespace MauiPrismSample
         protected override async void OnStart()
         {
             base.OnStart();
-
-            var navigationService = _containerProvider.Resolve<INavigationService>();
-            var mainPageViewModel = _containerProvider.Resolve<MainPageViewModel>();
-            Debug.Assert(mainPageViewModel != null, "MainPageViewModel not found");
-
-            var result = await navigationService.NavigateAsync("/NavigationPage/MainPage");
-
-
-        }
-
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new NavigationPage());
         }
     }
 }

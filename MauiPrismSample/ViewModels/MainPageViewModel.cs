@@ -21,7 +21,7 @@ namespace MauiPrismSample.ViewModels
         public MainPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            NavigateToSubPageCommand = ReactiveCommand.CreateFromTask(async () => await NavigationService.NavigateAsync("SubPage"));
+            NavigateToSubPageCommand = ReactiveCommand.CreateFromTask(async () => await NavigationService.NavigateAsync("SubPageViewModel"));
         }
     }
 }
